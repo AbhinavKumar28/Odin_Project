@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+.todo-app_mainheading{
+    text-align: center;
+    margin: 20px;
+    margin-top: 35px;
+}

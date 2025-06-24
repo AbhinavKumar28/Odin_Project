@@ -17,7 +17,55 @@ const gameBoard = (()=>{
     }
     return {board, setCell, resetCell}
 })()
-console.log(gameBoard.board.map(r=>r[1]))
+// console.log(gameBoard.board.map(r=>r[1]))
+let gameController = (function () {
+    let currentPlayer1;
+    let currentPlayer2;
+    let turn = 1;
+    let marker;
+
+    //Initialize the game round
+    function init(player1, player2) {
+        currentPlayer1 = player1;
+        currentPlayer2 = player2;
+        turn = 1;
+    
+        // Reinitialize the event listeners for the cells
+        let cells = document.querySelectorAll(".container div div");
+        Array.from(cells).forEach((cell) => {
+            // Remove any existing click events before reattaching
+            cell.removeEventListener("click", cellClickListener);
+
+            // Re-attach the event listener to each cell
+            cell.addEventListener("click", cellClickListener);
+        });
+    }
+
+    // Function to handle cell click
+    function cellClickListener(event) {
+        // If the cell is already marked or the game is over, do nothing
+        if (event.target.textContent != "" || gameBoard.gameResult()) {
+            return;
+        }
+
+        // Determine whose turn it is and set the marker
+        if (turn === 1) {
+            marker = currentPlayer1.marker;
+            turn = 2;
+        } else {
+            marker = currentPlayer2.marker;
+            turn = 1;
+        }
+
+        // Place the marker in the clicked cell
+        const row = event.target.dataset.row;
+        const column = event.target.dataset.column;
+        gameBoard.placeMarker(row, column, marker, currentPlayer1, currentPlayer2);
+    }
+
+    return { init };
+})();
+
 const gameController=(player1name="name1",player2name="name2")=>{
     const gameCheck =()=>{
         if (
