@@ -7,3 +7,21 @@ body {
     margin: 20px;
     margin-top: 35px;
 }
+.todoitem__deletebtn{
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+}
+.todoitem__openbtn{
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+}
+.todoitem__container{
+  font-size: 25px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 20px;
+  margin: 10px;
+}
