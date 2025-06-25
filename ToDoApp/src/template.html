@@ -5,7 +5,32 @@
   <title>Todo App</title>
 </head>
 <body>
-  <h1 class="todo-app_mainheading">This is a todo app project.</h1>
-  <div id = "entry-point"></div>
+  <h1 class="todoapp__mainheading">This is a todo app project.</h1>
+  <div id = "entrypoint">
+    <div class="displayflex">
+    <div id="topcontainer" class="topcontainer">
+        <div id="create-project-section">
+            <h3>Create New Project</h3>
+            <form action="" id="create-project-form">
+                <input type="text" id="project-name-input" name="project-name-input" placeholder="Enter new project name." required>
+                <button type="submit">Add Project</button>
+            </form>
+        </div> 
+        <div id="project-selection-section">
+            <h3>Select Project</h3>
+            <select name="projects" id="project-dropdown">
+                <option value="" disabled selected>Select a project.</option>
+                <option value="" >Default</option>
+            
+            </select>
+        </div> 
+        <div id="selected-project-display">
+            <h3>Selected Project:</h3>
+            <p id="selected-project-name">Default</p>
+        </div>
+    </div>
+    </div>
+    <div class="displayflex"><h3>Todo List</h3></div>
+  </div>
 </body>
 </html>

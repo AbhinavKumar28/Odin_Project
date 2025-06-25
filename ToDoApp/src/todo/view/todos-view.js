@@ -1,10 +1,17 @@
 import data from "../../data/data.js"
 export default function todoView(){
-    const mainDiv = document.getElementById("entry-point")
+    const mainDiv = document.getElementById("entrypoint")
+    const divcontainer = document.createElement("div")
+    divcontainer.classList.add="todolist_heading"
+    const div_para= document.createElement("p")
+    div_para.textContent = "Todo List"
+    
+    mainDiv.appendChild(divcontainer)
     data().forEach((element,i) => {
+        
         const div_for_each_item = document.createElement("div")
         div_for_each_item.id=`todo-item-${i}`
-        
+        div_for_each_item.textContent=
         div_for_each_item.classList.add("todoitem__container")
         const del_for_each_item = document.createElement("button")
         del_for_each_item.id=`todo-del-${i}`
@@ -22,6 +29,7 @@ export default function todoView(){
         div_for_each_item.append(del_for_each_item,span_for_each_item,open_for_each_item)
         // console.log(a.id)
         mainDiv.appendChild(div_for_each_item)
+        
     })
 }
 // todoView()
