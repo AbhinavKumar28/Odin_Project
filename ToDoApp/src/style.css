@@ -38,3 +38,23 @@ body {
   display: flex;
   justify-content: center;
 }
+.form-popup{
+  position: fixed;
+  top: 250px;
+  background-color: red;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
+.form-container > label{
+  font-size:large;
+  font-weight: bold;
+}
+#todoForm{
+  display: none;
+}
+.open-button{
+  position: fixed;
+  top: 250px;
+}
