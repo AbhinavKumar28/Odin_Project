@@ -32,6 +32,7 @@
     </div>
     <div class="displayflex"><h3>Todo List</h3></div>
     <button class="open-button" onclick="openForm()">Open Form</button>
+    <div id="todo-list-container"></div>
 
     <div class="form-popup" id="todoForm">
       <form action="" class="form-container">
@@ -49,12 +50,12 @@
         <label for="priority-dropdown">Select a priority.</label>
         <select name="priority" id="priority-dropdown" required>
             <option value="" disabled selected>Select a priority.</option>
-            <option value="" >Low</option>
-            <option value="" >Medium</option>
-            <option value="" >High</option>        
+            <option value="Low" >Low</option>
+            <option value="Medium" >Medium</option>
+            <option value="High" >High</option>        
         </select>
 
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn">Create</button>
         <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
       </form>
     </div>

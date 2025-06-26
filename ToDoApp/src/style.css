@@ -58,3 +58,8 @@ body {
   position: fixed;
   top: 250px;
 }
+#todo-list-container{
+  display: grid;
+  flex-direction: row;
+  justify-content: center;
+}
