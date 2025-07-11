@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="place-form">
+    <label>
+        Ship Length:
+        <select id="ship-length">
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+        </select>
+    </label>
+    <label>
+        Direction:
+        <select id="ship-direction">
+        <option value="right">Right</option>
+        <option value="left">Left</option>
+        <option value="down">Down</option>
+        <option value="up">Up</option>
+        </select>
+    </label>
+    <label>
+        Start Coordinate (e.g. 3,4):
+        <input type="text" id="ship-start" placeholder="x,y" required />
+    </label>
+    <button type="submit">Place Ship</button>
+    </form>
+
+    <button id="start-game">Start New Game</button>
+    <div id="status"></div>
+    <h2>Your Board</h2>
+    <div id="player-board" class="board"></div>
+    <h2>Enemy Board</h2>
+    <div id="computer-board" class="board"></div>
+
+</body>
+</html>
